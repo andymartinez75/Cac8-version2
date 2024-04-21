@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url("../img/cieloestrellado.jpg");
+    background-size: cover;    
+    color: #fff;
+}
+
+header {
+    background-color: #192845;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-right: 20px;
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo img {
+    max-height: 20vh;
+    
+}
+.title-logo {
+    display: grid;
+    max-width: 1200px;
+    justify-content: center;
+}
+#inicio {
+    padding: 20px;
+    border-top: 20px;  
+}
+
+#propiedades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px 0;
+    text-align: center;
+}
+.titulo-propiedades {
+    padding: 30px;
+    margin-bottom: 20px;
+
+}
+.propiedad-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.propiedad {
+    flex:1 1 30% ;
+    max-width: 300px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.propiedad img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.propiedad-info {
+    padding: 15px;
+    color: #fff;
+    text-shadow: 3px 3px 0 #000;
+}
+
+.propiedad-info h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+#contacto {
+    padding: 20px;
+    border-top: 20px;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#contact-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #192845;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .propiedad img {
+        max-width: 50%; 
+    }
+}
+
+
