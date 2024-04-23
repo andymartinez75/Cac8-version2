@@ -14,20 +14,27 @@ body {
 }
 
 header {
+    position: relative;
+    overflow: hidden;   
     background-color: #192845;
     color: #fff;
     padding: 20px;
+    padding: 15px;
+    height: 15vh;
+    width:100%;
+    box-sizing: border-box;
+    
 }
 
 nav ul {
     list-style-type: none;
-
     display: flex;
     justify-content: flex-end;
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-right: 2%;
+    font-size: 80%
 
 }
 
@@ -36,9 +43,11 @@ nav ul li a {
     text-decoration: none;
 }
 
-.logo img {
-    max-height: 20vh;
-    
+header .logo img {
+    position: absolute;
+    height: 50%;
+    margin: -3%;
+    margin-left: 3%;
 }
 .title-logo {
     display: grid;
@@ -50,14 +59,7 @@ nav ul li a {
     border-top: 20px;  
 }
 
-#propiedades {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 20px 0;
-    text-align: center;
-}
+
 .titulo-propiedades {
     padding: 30px;
     margin-bottom: 20px;
@@ -140,5 +142,81 @@ footer {
         max-width: 50%; 
     }
 }
+#propiedades {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px 0;
+    text-align: center;
+}
+.card {
 
+    position: relative;
+    width: 350px;
+    height: 250px;
+    margin: 20px;
+}
 
+.card .face {/*aspecto de tarjeta*/
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    transition: 1s; /*tiempo que va a demorar en dar vuelta la tarjeta*/
+    overflow:hidden;
+    backface-visibility: hidden;
+}
+
+.card .front {/*parte delantera de la tarjeta*/
+    transform: perspective(600px) rotateY(0deg);/*le estamos designando el angulo de una de las caras*/
+    box-shadow: 0 5px 10px rgb(113, 120, 226);
+}
+
+.card .front img {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*sirve para darle la orden a la imagen o video de como debería redimensionarse para ajustarse a su contenedor*/
+}
+
+.card .front h3{
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+    margin-top: 0%;
+    letter-spacing: 0px;
+    position: absolute;
+    text-align: center;
+
+}
+
+.card .back p {/*parte trasera de la tarjeta*/
+    font-size: 20;
+    position: absolute;
+    bottom: 0.5;
+    width: 90%;
+    height: 50%;
+    line-height: 25px;
+    text-shadow: 2px 1px rgb(9, 9, 122);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    background: rgb(0, 162, 255);
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px rgb(113, 120, 226);
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(0deg);
+}
