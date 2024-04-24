@@ -150,11 +150,12 @@ footer {
     justify-content: space-around;
     gap: 20px;
     
+    
 
 }
 
 .persona {
-    
+    gap:50px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
