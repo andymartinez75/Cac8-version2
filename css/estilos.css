@@ -14,20 +14,27 @@ body {
 }
 
 header {
+    position: relative;
+    overflow: hidden;   
     background-color: #192845;
     color: #fff;
     padding: 20px;
+    padding: 15px;
+    height: 15vh;
+    width:100%;
+    box-sizing: border-box;
+    
 }
 
 nav ul {
     list-style-type: none;
-
     display: flex;
     justify-content: flex-end;
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-right: 2%;
+    font-size: 80%
 
 }
 
@@ -36,9 +43,11 @@ nav ul li a {
     text-decoration: none;
 }
 
-.logo img {
-    max-height: 20vh;
-    
+header .logo img {
+    position: absolute;
+    height: 50%;
+    margin: -3%;
+    margin-left: 3%;
 }
 .title-logo {
     display: grid;
@@ -50,14 +59,7 @@ nav ul li a {
     border-top: 20px;  
 }
 
-#propiedades {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 20px 0;
-    text-align: center;
-}
+
 .titulo-propiedades {
     padding: 30px;
     margin-bottom: 20px;
@@ -132,7 +134,7 @@ footer {
     background-color: #192845;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 40px 1.25rem;
 }
 
 @media screen and (max-width: 600px) {
