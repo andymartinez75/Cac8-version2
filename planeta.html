@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeta</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+
+        <div class="title-logo">
+            <h1>InmoEspacial Cac8</h1>
+
+        </div>
+
+        <nav>
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.png" alt="Logo astronauta sobrevolando la tierra y la luna">
+                </a>
+
+
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./propiedades.html">Propiedades Espaciales</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="./nosotros.html">Quienes Somos</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div id="app">
+            <div v-for="dato in datos">
+                <p>Planeta:{{dato.planeta}}</p>
+                <p>Descripcion:{{dato.descripcion}}</p>
+                <img width="100" v-bind:src="dato.imagen" v-bind:alt="dato.imagen">
+    
+               </div>
+
+
+        </div>
+        
+
+        
+    </main>
+
+
+    
+   <footer>
+        <p>&copy; 2024 InmoEspacial Cac8. Todos los derechos reservados.</p>
+    </footer> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
