@@ -156,15 +156,9 @@ footer {
     
 }
 
-@media screen and (max-width: 1369px) {
-    .nosotros-section {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-    }
-    .persona .texto {
-        font-size: 0.9rem; /* Reducir el tamaño de la fuente */
-    }
+.description{
+    font-size: 1.3rem;
 }
-
 
 .persona {
     gap:50px;
@@ -187,6 +181,14 @@ footer {
     flex: 1; 
 }
 
+@media screen and (max-width: 1438px) {
+    .nosotros-section {
+        grid-template-columns: 1fr; 
+    }
+    .persona .texto p{
+        font-size: 1rem; 
+    }
+}
 
 
 #propiedades {
