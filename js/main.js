@@ -1,4 +1,5 @@
-    function validarFormularioContacto() {
+    
+     function validarFormularioContacto() {
         let nombre = document.getElementsByName("nombre")[0];
         let apellido = document.getElementsByName("apellido")[0];
         let email = document.getElementsByName("email")[0];
@@ -59,6 +60,7 @@
             mostrarMensajeEnviado();
             // Limpiar el formulario después de enviarlo
             document.getElementById("contact-form").reset();
+            
         }
         
         return !error;
@@ -72,17 +74,19 @@
     
     function validarTelefono(telefono) {
         // Expresión regular para validar un número de teléfono de 10 dígitos
-        var telefonoValido = /^\d{10}$/;
+        var telefonoValido = /^\d{11}$/;
         return telefonoValido.test(telefono);
     }
     
-    function mostrarMensajeEnviado() {
-        var mensajeEnviado = document.getElementById("mensaje-enviado");
-        mensajeEnviado.style.display = "block";
 
+    function enviarFormulario() {
+        
+        alert("¡Formulario enviado! En breve nos estaremos comunicando con Ud.");
+
+        document.getElementById("contact-form").reset();
+        document.getElementById("inicio").scrollIntoView();
     }
     
-
 
 const { createApp } = Vue;
 
