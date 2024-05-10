@@ -144,6 +144,8 @@ footer {
 }
 
 
+
+
 /* desde aca section QUIENES SOMOS */
 .nosotros-section {
     padding: 6.25rem;
@@ -153,6 +155,16 @@ footer {
     gap: 20px;
     
 }
+
+@media screen and (max-width: 1369px) {
+    .nosotros-section {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+    .persona .texto {
+        font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    }
+}
+
 
 .persona {
     gap:50px;
