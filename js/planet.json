@@ -1,0 +1,105 @@
+[
+    {
+        "planeta":"Tierra",
+        "descripcion":"El planeta Tierra, es un planeta terrestre y rocoso.Es especial porque es un planeta océano, ya que el agua cubre el 70% de su sup. ",
+        "duracion_dia":"24 hs",
+        "cantidad_lunas":"1",
+        "precio_metro_cuad":"$49000",
+        "oferta":false,
+        "imagen":"../img/gif/tierra-unscreen.gif"
+    },
+      
+    { 
+        "planeta":"Marte",
+        "descripcion":"El planeta rojo es prácticamente un desierto.",
+        "duracion_dia":"25 hs",
+        "cantidad_lunas":"2",
+        "precio_metro_cuad":"$149000",
+        "oferta":false,
+        "imagen":"../img/gif/marte-unscreen.gif"
+      
+    },
+    { 
+        "planeta":"Mercurio",
+        "descripcion":"Mercurio solo tiene un amanecer cada 180 días terrestres.Pero tu cumplea;os seria cada 3 meses.",
+        "duracion_dia":"1408 hs",
+        "cantidad_lunas":"0",
+        "precio_metro_cuad":"$349000",
+        "oferta":false,
+        "imagen":"../img/gif/mercuriounscreen.gif"
+      
+    },
+    { 
+        "planeta":"Venus",
+        "descripcion":"En Venus, el Sol sale cada 117 días terrestres. Así que el Sol sale dos veces por año.",
+        "duracion_dia":"5832 hs",
+        "cantidad_lunas":"0",
+        "precio_metro_cuad":"$349000",
+        "oferta":false,
+        "imagen":"../img/gif/venus-unscreen.gif"
+      
+    },
+    { 
+        "planeta":"Jupiter",
+        "descripcion":"Júpiter es un gigante gaseoso y no tiene una superficie sólida,es el planeta más grande de nuestro sistema solar.",
+        "duracion_dia":"10 hs",
+        "cantidad_lunas":"95",
+        "precio_metro_cuad":"$349000",
+        "oferta":false,
+        "imagen":"../img/gif/jupiter.gif"
+      
+    },
+    { 
+        "planeta":"Saturno",
+        "descripcion":"Saturno esta a 1448 millones de km del sol,esa distancia también conlleva sufrir temperaturas medias de -176℃.",
+        "duracion_dia":"11 hs",
+        "cantidad_lunas":"146",
+        "precio_metro_cuad":"$349000",
+        "oferta":false,
+        "imagen":"../img/gif/saturno.gif"
+      
+    }
+    ,
+    { 
+        "planeta":"Urano",
+        "descripcion":"Urano se encuentra tan lejos, tarda 84 años terrestres en completar una órbita. ¡Y cada estación dura 21 años de la Tierra!",
+        "duracion_dia":"17 hs",
+        "cantidad_lunas":"28",
+        "precio_metro_cuad":"$349000",
+        "oferta":false,
+        "imagen":"../img/gif/urano-unscreen.gif"
+      
+    },
+    { 
+        "planeta":"Neptuno",
+        "descripcion":"El viento en Neptuno puede alcanzar 1931 km por hora. ¡Es el más fuerte del sistema solar! Su recorrido alrededor del Sol es tan largo que tarda 165 años terrestres en completarlo",
+        "duracion_dia":"16 hs",
+        "cantidad_lunas":"16",
+        "precio_metro_cuad":"$349000",
+        "oferta":false,
+        "imagen":"../img/gif/neptuno-unscreen.gif"
+      
+    },
+    { 
+        "planeta":"Sol",
+        "descripcion":"El sol tiene 5.500 grados en la superficie, y 15.000.000 grados centígrados en el núcleo.Es 109 veces mas ancho que la Tierra. ",
+        "duracion_dia":"648 hs",
+        "cantidad_lunas":"0",
+        "precio_metro_cuad":"$349000",
+        "oferta":true,
+        "imagen":"../img/gif/sun-unscreen.gif"
+      
+    },
+    { 
+        "planeta":"Luna",
+        "descripcion":"La Luna no tiene casi erosión porque no tiene atmósfera. Eso significa que no tiene viento, ni clima.",
+        "duracion_dia":"648 hs",
+        "cantidad_lunas":"0",
+        "precio_metro_cuad":"$349000",
+        "oferta":false,
+        "imagen":"../img/gif/luna-unscreen.gif"
+      
+    }
+
+    
+]
