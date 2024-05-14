@@ -88,34 +88,49 @@
     }
     
 
-const { createApp } = Vue;
+    const { createApp } = Vue;
 
 createApp({
     data() {
         return {
             url: "./js/planet.json",
             datos: [],
-            error: false,
+            datosOfertas:[],
+            error: false
         };
     },
     methods: {
         fetchData(url) {
             fetch(url)
                 .then(response => response.json())
-                .then(
-                    data => {
-                        console.log(data)
-                        this.datos = data
-                    }
-                )
-                .catch(
-                  this.error
-                
-                );
-
+                .then(data => {
+                    console.log(data);
+                    this.datos = data;
+                    this.loadSelectedPlanetData(); // Llama a loadSelectedPlanetData después de cargar los datos
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    this.error = true;
+                });
+        },
+        loadSelectedPlanetData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const planetName = urlParams.get('planeta');
+            if (planetName) {
+                const planetData = this.datos.find(planeta => planeta.planeta === planetName);
+                if (planetData) {
+                    this.datosPrincipales = [planetData];
+                    this.datosOfertas = this.datos.filter(planeta=>planeta.oferta && planeta.planeta!==planetName);
+                } else {
+                    this.error = true;
+                }
+            } else {
+                this.error = true;
+            }
         }
     },
     created() {
-        this.fetchData(this.url);
+        this.fetchData(this.url); // Llama a fetchData al inicio para cargar los datos
     }
-}).mount('#app')
+}).mount('#app');
+

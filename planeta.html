@@ -32,7 +32,7 @@
                 <ul>
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="./propiedades.html">Propiedades Espaciales</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="./index.html#contacto">Contacto</a></li>
                     <li><a href="./nosotros.html">Quienes Somos</a></li>
                 </ul>
             </div>
@@ -41,17 +41,25 @@
     </header>
     <main>
         <div id="app">
-            <div v-for="dato in datos">
-                <p>Planeta:{{dato.planeta}}</p>
+            <div v-for="dato in datosPrincipales" :key="dato.planeta">
+                <h2>Planeta:{{dato.planeta}}</h2>
                 <p>Descripcion:{{dato.descripcion}}</p>
+                <p>Duracion del dia en horas:{{dato.duracion_dia}} </p>
+                <p>Cantidad de lunas:{{dato.cantidad_lunas}}</p>
+                <p>Precio por metro cuadrado: {{dato.precio_metro_cuad}}</p>
                 <img width="100" v-bind:src="dato.imagen" v-bind:alt="dato.imagen">
     
                </div>
-
-
+               <section class="ofertas">
+                <div v-for="dato in datosOfertas" :key="dato.planeta">
+                    <h3>OFERTA</h3>
+                    <p>Planeta: {{dato.planeta}}</p>
+                    <p>Duracion del dia en horas:{{dato.duracion_dia}} </p>
+                    <p>Precio por metro cuadrado: {{dato.precio_metro_cuad}}</p>
+                    <img v-bind:src="dato.imagen" v-bind:alt="dato.imagen">
+                </div>
+            </section>
         </div>
-        
-
         
     </main>
 

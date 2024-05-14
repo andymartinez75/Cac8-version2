@@ -284,5 +284,34 @@ footer {
     border: 3px solid rgb(228, 227, 236);
 }  /*estilos para js */
 
+/* Estilos para la sección principal usando json y js  */
+#app {
+    max-width: 50%;
+    margin: 20px auto;
+}
+
+/* Estilos para cada dato del planeta */
+
+#app p {
+    margin-bottom: 10px;
+}
+
+#app img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la sección de ofertas */
+.ofertas {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ofertas img {
+    width: 45%; /* Ajusta el tamaño de las imágenes de las ofertas */
+    height: auto;
+}
 
 
