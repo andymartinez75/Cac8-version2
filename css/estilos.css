@@ -180,18 +180,14 @@ footer {
 }
 
 .foto-persona {
-    /*width: 200px;
+    width: 200px;
     height: 200px;
     border-radius: 50%; 
-    margin-right: 20px; */
+    margin-right: 20px; 
     
-/* modifico estilos para que las fotos queden mejor -ver con Diego  */
 
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 20px;
+
+   
 }
 
 .texto {
@@ -327,3 +323,19 @@ footer {
 }
 
 
+/*ICONOS REDES SOCIALES*/
+
+.social-icons {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+.social-icons a {
+    color: WHITE;
+    text-decoration: none;
+    font-size: 24px;
+}
+.social-icons a:hover {
+    color: #007bff;
+}
