@@ -54,8 +54,8 @@
         <section id="propiedades">
 
             <div class="propiedad">
-                <a href="./propiedades.html">
-                    <img src="./img/marte.jpg" alt="Imagen del planeta Marte">
+                <a href="./planeta.html?planeta=Marte">
+                    <img src="./img/gif/marte-unscreen.gif" alt="Imagen del planeta Marte">
                     <div class="propiedad-info">
                         <h3>Marte</h3>
                         <p> Haz clic para más información sobre Marte</p>
@@ -63,8 +63,8 @@
                 </a>
             </div>
             <div class="propiedad">
-                <a href="./propiedades.html">
-                    <img src="./img/marte.jpg" alt="Imagen del planeta Venus">
+                <a href="./planeta.html?planeta=Venus">
+                    <img src="./img/gif/venus-unscreen.gif" alt="Imagen del planeta Venus">
                     <div class="propiedad-info">
                         <h3>Venus</h3>
                         <p> Haz clic para más información sobre Venus</p>
@@ -72,8 +72,8 @@
                 </a>
             </div>
             <div class="propiedad">
-                <a href="./propiedades.html">
-                    <img src="./img/marte.jpg" alt="Imagen del planeta Jupiter">
+                <a href="./planeta.html?planeta=Jupiter">
+                    <img src="./img/gif/jupiter.gif" alt="Imagen del planeta Jupiter">
                     <div class="propiedad-info">
                         <h3>Jupiter</h3>
                         <p> Haz clic para más información sobre Jupiter</p>
@@ -81,26 +81,27 @@
                 </a>
             </div>
             <div class="propiedad">
-                <a href="./propiedades.html">
-                    <img src="./img/marte.jpg" alt="Imagen del planeta Neptuno">
+                <a href="./planeta.html?planeta=Urano">
+                    <img src="./img/gif/urano-unscreen.gif" alt="Imagen del planeta Urano">
                     <div class="propiedad-info">
-                        <h3>Neptuno</h3>
+                        <h3>Urano</h3>
                         <p> Haz clic para más información sobre Neptuno</p>
                     </div>
                 </a>
             </div>
             <div class="propiedad">
-                <a href="./propiedades.html">
-                    <img src="./img/marte.jpg" alt="Imagen del planeta Mercurio">
+                <a href="./planeta.html?planeta=Mercurio">
+                    <img src="./img/gif/mercuriounscreen.gif" alt="Imagen del planeta Mercurio">
                     <div class="propiedad-info">
                         <h3>Mercurio</h3>
                         <p> Haz clic para más información sobre Mercurio</p>
+                        
                     </div>
                 </a>
             </div>
             <div class="propiedad">
-                <a href="./propiedades.html">
-                    <img src="./img/marte.jpg" alt="Imagen del planeta Tierra">
+                <a href="./planeta.html?planeta=Tierra">
+                    <img src="./img/gif/tierra-unscreen.gif" alt="Imagen del planeta Tierra">
                     <div class="propiedad-info">
                         <h3>Tierra</h3>
                         <p> Haz clic para más información sobre Tierra</p>
@@ -116,8 +117,11 @@
         <section id="contacto">
             <h2>Contactanos</h2>
             <p>A traves del siguiente formulario, y te responderemos a la brevedad.</p>
-            <form id="contact-form" action="#" method="post">
+            <form id="contact-form" action="#" method="post" onsubmit="return validarFormularioContacto();">
+
+            
                 <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
                 <input type="email" name="email" placeholder="Correo electrónico" required>
                 <input type="tel" name="telefono" placeholder="Teléfono" required>
                 <textarea name="mensaje" placeholder="Mensaje" required></textarea>
@@ -126,18 +130,24 @@
                     <option value="" disabled selected>Selecciona un motivo</option>
                     <option value="consulta">Consulta</option>
                     <option value="solicitud">Solicitud de tasaciones</option>
-                    <option value="queja">Alquiler</option>
+                    <option value="alquiler">Alquiler Temporal</option>
                 </select>
                 <input type="checkbox" name="suscripcion" id="suscripcion">
                 <label for="suscripcion">Suscribirse a nuestro boletín</label>
-                <input type="submit" value="Enviar">
+                <input type="button" value="Enviar" onclick="enviarFormulario()">
+                
             </form>
+            
+            
         </section>
     </main>
         <footer>
         <p>&copy; 2024 InmoEspacial Cac8. Todos los derechos reservados.</p>
     </footer>
 
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
+<script src="./js/main.js"></script>
 </body>
 
-</html>
+</html

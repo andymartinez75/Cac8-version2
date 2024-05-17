@@ -8,7 +8,7 @@ body {
     font-family: "Orbitron", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-image: url("../img/cieloestrellado.jpg");
+    background-image: url("../img/estrellas.gif");
     background-size: cover;    
     color: #fff;
 }
@@ -19,7 +19,7 @@ header {
     background-color: #192845;
     color: #fff;
     padding: 20px;
-    padding: 15px;
+    
     height: 15vh;
     width:100%;
     box-sizing: border-box;
@@ -45,15 +45,20 @@ nav ul li a {
 
 header .logo img {
     position: absolute;
-    height: 50%;
+    height: 60%;
     margin: -3%;
     margin-left: 3%;
-}
+    
+    }
+    
+
+
 .title-logo {
     display: grid;
     max-width: 1200px;
     justify-content: center;
 }
+
 #inicio {
     padding: 20px;
     border-top: 20px;  
@@ -70,13 +75,14 @@ header .logo img {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+   
 }
 
 .propiedad {
     flex:1 1 30% ;
     max-width: 300px;
-    border: 1px solid #fff;
-    border-radius: 8px;
+   /* border: 3px solid #fff;
+    border-radius: 8px;*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-decoration: none;
@@ -85,8 +91,11 @@ header .logo img {
 
 .propiedad img {
     width: 100%;
-    height: auto;
+    height:auto;
     border-radius: 8px 8px 0 0;
+    /*padding-top: 20px;*/
+    max-width:min-content;/*para probar si queda*/
+    max-height:35vh;
 }
 
 .propiedad-info {
@@ -141,10 +150,11 @@ footer {
     .propiedad img {
         max-width: 50%; 
     }
+
 }
 
 
-
+    
 
 /* desde aca section QUIENES SOMOS */
 .nosotros-section {
@@ -170,15 +180,23 @@ footer {
 }
 
 .foto-persona {
-    width: 200px;
+    /*width: 200px;
     height: 200px;
     border-radius: 50%; 
-    margin-right: 20px;
+    margin-right: 20px; */
     
+/* modifico estilos para que las fotos queden mejor -ver con Diego  */
+
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .texto {
-    flex: 1; 
+    flex: 1 1 50%; 
+    text-shadow: 3px 3px 0 #000;
 }
 
 @media screen and (max-width: 1438px) {
@@ -269,3 +287,43 @@ footer {
 .card:hover .back{
     transform: perspective(600px) rotateY(0deg);
 }
+
+.mensaje-enviado { 
+    background-color: #f0f0f0;
+    color: rgb(36, 21, 175);
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid rgb(228, 227, 236);
+}  /*estilos para js */
+
+/* Estilos para la sección principal usando json y js  */
+#app {
+    max-width: 50%;
+    margin: 20px auto;
+}
+
+/* Estilos para cada dato del planeta */
+
+#app p {
+    margin-bottom: 10px;
+}
+
+#app img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la sección de ofertas */
+.ofertas {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ofertas img {
+    width: 45%; /* Ajusta el tamaño de las imágenes de las ofertas */
+    height: auto;
+}
+
+
