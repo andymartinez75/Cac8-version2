@@ -52,18 +52,13 @@
             motivo.focus();
             error = true;
         }
-        
-        if (!error) {
-            // Aquí puedes enviar el formulario
-            alert("¡Formulario enviado! En breve nos estaremos comunicando con Ud.");
-            // Mostrar mensaje de formulario enviado en pantalla
-            mostrarMensajeEnviado();
-            // Limpiar el formulario después de enviarlo
-            document.getElementById("contact-form").reset();
-            
+        if (error) {
+            // Evitar el envío del formulario si hay errores
+            return false;
+        } else {
+            enviarFormulario();
         }
-        
-        return !error;
+            return false;
     }
     
     function validarEmail(email) {
@@ -74,7 +69,7 @@
     
     function validarTelefono(telefono) {
         // Expresión regular para validar un número de teléfono de 10 dígitos
-        var telefonoValido = /^\d{11}$/;
+        var telefonoValido = /^\d{10}$/;
         return telefonoValido.test(telefono);
     }
     
@@ -86,7 +81,7 @@
         document.getElementById("contact-form").reset();
         document.getElementById("inicio").scrollIntoView();
     }
-    
+
 
     const { createApp } = Vue;
 

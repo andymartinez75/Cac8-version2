@@ -301,8 +301,7 @@ footer {
     height: auto;
     margin-bottom: 20px;
 }
-
-/* Estilos para la sección de ofertas */
+ Estilos para la sección de ofertas 
 .ofertas {
     margin-top: 50px;
     display: flex;
@@ -310,8 +309,8 @@ footer {
 }
 
 .ofertas img {
-    width: 45%; /* Ajusta el tamaño de las imágenes de las ofertas */
-    height: auto;
+    width: 45%; 
+    height:auto;
 }
 
 

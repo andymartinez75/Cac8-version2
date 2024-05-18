@@ -114,19 +114,19 @@
 
         </section>
 
-        <section id="contacto">
+         <section id="contacto"> 
             <h2>Contactanos</h2>
             <p>A traves del siguiente formulario, y te responderemos a la brevedad.</p>
             <form id="contact-form" action="#" method="post" onsubmit="return validarFormularioContacto();">
 
             
-                <input type="text" name="nombre" placeholder="Nombre" required>
-                <input type="text" name="apellido" placeholder="Apellido" required>
-                <input type="email" name="email" placeholder="Correo electrónico" required>
-                <input type="tel" name="telefono" placeholder="Teléfono" required>
-                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <input type="text" name="nombre" id="nombre"placeholder="Nombre" required>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
+                <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
 
-                <select name="motivo" required>
+                <select name="motivo" id="motivo" required>
                     <option value="" disabled selected>Selecciona un motivo</option>
                     <option value="consulta">Consulta</option>
                     <option value="solicitud">Solicitud de tasaciones</option>
@@ -134,10 +134,12 @@
                 </select>
                 <input type="checkbox" name="suscripcion" id="suscripcion">
                 <label for="suscripcion">Suscribirse a nuestro boletín</label>
-                <input type="button" value="Enviar" onclick="enviarFormulario()">
+                <input type="submit" value="Enviar">
+                
+                
+
                 
             </form>
-            
             
         </section>
     </main>
