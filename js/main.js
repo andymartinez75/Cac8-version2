@@ -52,18 +52,29 @@
             motivo.focus();
             error = true;
         }
+        if (archivo.files.length > 0) {
+            let file = archivo.files[0];
+            let validExtensions = ["image/jpeg", "image/png", "application/pdf"];
+            let maxSize = 2 * 1024 * 1024; // 2 MB en bytes
+    
+            if (!validExtensions.includes(file.type)) {
+                alert("Solo se permiten archivos JPG, PNG o PDF.");
+                archivo.focus();
+                error = true;
+            } else if (file.size > maxSize) {
+                alert("El archivo no debe superar los 2 MB.");
+                archivo.focus();
+                error = true;
+            }
         
-        if (!error) {
-            // Aquí puedes enviar el formulario
-            alert("¡Formulario enviado! En breve nos estaremos comunicando con Ud.");
-            // Mostrar mensaje de formulario enviado en pantalla
-            mostrarMensajeEnviado();
-            // Limpiar el formulario después de enviarlo
-            document.getElementById("contact-form").reset();
-            
         }
-        
-        return !error;
+        if (error) {
+            // Evitar el envío del formulario si hay errores
+            return false;
+        } else {
+            enviarFormulario();
+        }
+            return false;
     }
     
     function validarEmail(email) {
@@ -74,7 +85,7 @@
     
     function validarTelefono(telefono) {
         // Expresión regular para validar un número de teléfono de 10 dígitos
-        var telefonoValido = /^\d{11}$/;
+        var telefonoValido = /^\d{10}$/;
         return telefonoValido.test(telefono);
     }
     
@@ -86,7 +97,7 @@
         document.getElementById("contact-form").reset();
         document.getElementById("inicio").scrollIntoView();
     }
-    
+
 
     const { createApp } = Vue;
 
