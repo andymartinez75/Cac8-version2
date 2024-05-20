@@ -306,11 +306,13 @@ footer {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+
 }
 
 .ofertas img {
     width: 45%; 
     height:auto;
-}
+} 
+
 
 

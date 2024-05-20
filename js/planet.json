@@ -55,7 +55,7 @@
         "duracion_dia":"11 hs",
         "cantidad_lunas":"146",
         "precio_metro_cuad":"$349000",
-        "oferta":true,
+        "oferta":false,
         "imagen":"../img/gif/saturno.gif"
       
     }
