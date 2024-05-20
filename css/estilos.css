@@ -14,13 +14,11 @@ body {
 }
 
 header {
-    position: relative;
-    overflow: hidden;   
+    position: relative;   
     background-color: #192845;
     color: #fff;
     padding: 20px;
-    
-    height: 15vh;
+    height: 16vh;
     width:100%;
     box-sizing: border-box;
     
@@ -33,6 +31,7 @@ nav ul {
 }
 
 nav ul li {
+    margin-left: 20px;
     margin-right: 2%;
     font-size: 80%
 
@@ -45,9 +44,9 @@ nav ul li a {
 
 header .logo img {
     position: absolute;
-    height: 60%;
-    margin: -3%;
-    margin-left: 3%;
+    height: 45px;
+    margin: -40px;
+    margin-left: 5px;
     
     }
     
@@ -146,11 +145,24 @@ footer {
     padding: 40px 1.25rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     .propiedad img {
-        max-width: 50%; 
+        max-width: 50%;
+
+    }
+    
+    .title-logo h1{
+        height: max-content;
+        font-size: 24px;
     }
 
+
+}
+@media screen and (max-width:425px){ 
+    .title-logo h1{
+        height: max-content;
+        font-size: 18px;
+    }
 }
 
 
