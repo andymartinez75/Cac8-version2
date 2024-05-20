@@ -313,12 +313,11 @@ footer {
     height: auto;
     margin-bottom: 20px;
 }
- Estilos para la sección de ofertas 
+
 .ofertas {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .ofertas img {
