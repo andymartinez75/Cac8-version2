@@ -99,7 +99,18 @@
         "oferta":false,
         "imagen":"../img/gif/luna-unscreen.gif"
       
+    },
+    { 
+        "planeta":"Pluton",
+        "descripcion":"Es un planeta enano.El ancho del planeta equivale a la mitad de EEUU y si pesaras 100 kg alli solo pesarias 6,7 kg.",
+        "duracion_dia":"153 hs",
+        "cantidad_lunas":"5",
+        "precio_metro_cuad":"$149000",
+        "oferta":true,
+        "imagen":"../img/gif/pluton.gif"
+      
     }
+
 
     
 ]

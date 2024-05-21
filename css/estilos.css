@@ -31,6 +31,7 @@ nav ul {
 }
 
 nav ul li {
+    margin-left: 20px;
     margin-right: 2%;
     font-size: 80%
 
@@ -43,9 +44,10 @@ nav ul li a {
 
 header .logo img {
     position: absolute;
-    height: 45px;
-    margin: -40px;
-    margin-left: 5px
+    height: 60%;
+    margin: -3%;
+    margin-left: 3%;
+    
     }
     
 
@@ -61,25 +63,21 @@ header .logo img {
     border-top: 20px;  
 }
 
-
 .titulo-propiedades {
     padding: 30px;
     margin-bottom: 20px;
-
 }
 .propiedad-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-   
+
 }
 
 .propiedad {
     flex:1 1 30% ;
     max-width: 300px;
-   /* border: 3px solid #fff;
-    border-radius: 8px;*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-decoration: none;
@@ -90,8 +88,7 @@ header .logo img {
     width: 100%;
     height:auto;
     border-radius: 8px 8px 0 0;
-    /*padding-top: 20px;*/
-    max-width:min-content;/*para probar si queda*/
+    max-width:min-content;
     max-height:35vh;
 }
 
@@ -147,16 +144,7 @@ footer {
     .propiedad img {
         max-width: 50%; 
     }
-    .title-logo h1{
-    height: max-content;
-    font-size: 24px;
-}
-}
-@media screen and (max-width:425px){ 
-.title-logo h1{
-    height: max-content;
-    font-size: 18px;
-}
+
 }
 
 
@@ -178,17 +166,10 @@ footer {
     align-items: center;
     margin-bottom: 20px;
     height: 18.75rem;
-
 }
 
 .foto-persona {
-    /*width: 200px;
-    height: 200px;
-    border-radius: 50%; 
-    margin-right: 20px; */
-    
-/* modifico estilos para que las fotos queden mejor -ver con Diego  */
-
+ 
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
@@ -201,7 +182,7 @@ footer {
     text-shadow: 3px 3px 0 #000;
 }
 
-
+/*Estilos propiedades espaciales*/
 
 #propiedades {
     display: flex;
@@ -288,36 +269,90 @@ footer {
     padding: 10px;
     margin-top: 10px;
     border: 3px solid rgb(228, 227, 236);
-}  /*estilos para js */
+}  
+/*estilos para js y ofertas-planeta*/
 
-/* Estilos para la sección principal usando json y js  */
 #app {
-    max-width: 50%;
+    max-width: 1200px;
     margin: 20px auto;
-}
-
-/* Estilos para cada dato del planeta */
-
-#app p {
-    margin-bottom: 10px;
-}
-
-#app img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* Estilos para la sección de ofertas */
-.ofertas {
-    margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.planeta-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.planeta-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.planeta-imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+.planeta-detalle {
+    flex: 2;
+    text-align: left;
+}
+
+.planeta-detalle h2,
+.planeta-detalle p {
+    margin: 10px 0;
+}
+
+.oferta-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.oferta-sticker {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    z-index: 1;
+    animation: blink-animation 1.5s infinite;
+}
+
+@keyframes blink-animation {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
 }
 
 .ofertas img {
-    width: 45%; /* Ajusta el tamaño de las imágenes de las ofertas */
+    width: 50%;
     height: auto;
+    border-radius: 5px;
 }
 
+.oferta-item {
+    position: relative;
+    width: calc(50% - 20px);
+    border: 3px solid #192845;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
 
+.oferta-item p {
+    margin: 10px 0;
+}
