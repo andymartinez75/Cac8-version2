@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon16x16.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -48,7 +48,7 @@
                 <img src="./img/integrantes/Noelia.jfif" alt="Noelia" class="foto-persona">
                 <div class="texto">
                     <h2>Noelia M. Saucedo</h2>
-                    <p>Hola, soy Noelia. Mi sueño es hacer que la emoción y la aventura del espacio estén al alcance de todos. Con mi experiencia en programación y mi amor por la tecnología, estoy emocionada de contribuir a este increíble proyecto</p>
+                    <p class="description">Hola, soy Noelia. Mi sueño es hacer que la emoción y la aventura del espacio estén al alcance de todos. Con mi experiencia en programación y mi amor por la tecnología, estoy emocionada de contribuir a este increíble proyecto</p>
                 </div>
             </div>
             <div class="persona">
@@ -63,14 +63,14 @@
                 <img src="./img/integrantes/AndreaM.jpeg" alt="Andrea Martinez" class="foto-persona">
                 <div class="texto">
                     <h2>Andrea Martinez</h2>
-                    <p>Hola soy Andrea , como amante del universo y mi destreza en sistemas nos preparamos para conquistar horizontes estelares. En nuestro equipo de desarrollo ,el cielo ya no es el límite, es solo el principio de una emocionante aventura. ¡Listos para lanzarnos al espacio con estilo!</p>
+                    <p class="description">Hola soy Andrea , como amante del universo y mi destreza en sistemas nos preparamos para conquistar horizontes estelares. En nuestro equipo de desarrollo ,el cielo ya no es el límite, es solo el principio de una emocionante aventura. ¡Listos para lanzarnos al espacio con estilo!</p>
                 </div>
             </div>
             <div class="persona">
                 <img src="./img/integrantes/FabianSallas.jpg" alt="Fabian Sallas" class="foto-persona">
                 <div class="texto">
                     <h2>Fabian Sallas</h2>
-                    <p>Larga vida y prosperidad , Mi nombre es Fabian , procedente del planeta tierra y de la especie Homo Sapiens Sapiens , FullStack Python y Técnico Químico , aventurero hasta la médula , te invito a buscar echar raíces en nuestras mejores propuestas Inmo Espacial!</p>
+                    <p class="description">Larga vida y prosperidad , Mi nombre es Fabian , procedente del planeta tierra y de la especie Homo Sapiens Sapiens , FullStack Python y Técnico Químico , aventurero hasta la médula , te invito a buscar echar raíces en nuestras mejores propuestas Inmo Espacial!</p>
                     
                 </div>
             </div>
@@ -79,6 +79,15 @@
 
     <footer class="footer">
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector("footer").outerHTML = data;
+                });
+        });
+    </script>
 
      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
      <script src="./js/main.js"></script>
