@@ -1,4 +1,16 @@
-    
+
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector("footer").outerHTML = data;
+        });
+});
+
+
+
+
+
      function validarFormularioContacto() {
         let nombre = document.getElementsByName("nombre")[0];
         let apellido = document.getElementsByName("apellido")[0];
