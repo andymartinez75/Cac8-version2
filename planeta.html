@@ -8,27 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-
-
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon16x16.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <header>
-
         <div class="title-logo">
             <h1>InmoEspacial Cac8</h1>
-
         </div>
-
         <nav>
             <div class="logo">
                 <a href="./index.html">
                     <img src="./img/logo.png" alt="Logo astronauta sobrevolando la tierra y la luna">
                 </a>
-
-
                 <ul>
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="./propiedades.html">Propiedades Espaciales</a></li>
@@ -36,38 +29,40 @@
                     <li><a href="./nosotros.html">Quienes Somos</a></li>
                 </ul>
             </div>
-
         </nav>
     </header>
     <main>
         <div id="app">
-            <div v-for="dato in datosPrincipales" :key="dato.planeta">
-                <h2>Planeta:{{dato.planeta}}</h2>
-                <p>Descripcion:{{dato.descripcion}}</p>
-                <p>Duracion del dia en horas:{{dato.duracion_dia}} </p>
-                <p>Cantidad de lunas:{{dato.cantidad_lunas}}</p>
-                <p>Precio por metro cuadrado: {{dato.precio_metro_cuad}}</p>
-                <img width="100" v-bind:src="dato.imagen" v-bind:alt="dato.imagen">
-    
-               </div>
-               <section class="ofertas">
-                <div v-for="dato in datosOfertas" :key="dato.planeta">
-                    <h3>OFERTA</h3>
-                    <p>Planeta: {{dato.planeta}}</p>
-                    <p>Duracion del dia en horas:{{dato.duracion_dia}} </p>
-                    <p>Precio por metro cuadrado: {{dato.precio_metro_cuad}}</p>
+            <div v-for="dato in datosPrincipales" :key="dato.planeta" class="planeta-container">
+                <div class="planeta-imagen">
                     <img v-bind:src="dato.imagen" v-bind:alt="dato.imagen">
                 </div>
-            </section>
-        </div>
+                <div class="planeta-detalle">
+                    <h2>Planeta: {{dato.planeta}}</h2>
+                    <p>Descripcion: {{dato.descripcion}}</p>
+                    <p>Duracion del dia en horas: {{dato.duracion_dia}}</p>
+                    <p>Cantidad de lunas: {{dato.cantidad_lunas}}</p>
+                    <p>Precio por metro cuadrado: {{dato.precio_metro_cuad}}</p>
+                </div>
+            </div>
+            
         
+        <section class="ofertas">
+            <div class="oferta-container">
+                <div class="oferta-item" v-for="dato in datosOfertas" :key="dato.planeta">
+                    <h3>Planeta: {{dato.planeta}}</h3>
+                    <p>Duracion del dia en horas: {{dato.duracion_dia}}</p>
+                    <p>Precio por metro cuadrado: {{dato.precio_metro_cuad}}</p>
+                    <img v-bind:src="dato.imagen" v-bind:alt="dato.imagen">
+                    <div class="oferta-sticker">OFERTA</div>
+                </div>
+            </div>
+        </section>
+      
     </main>
-
-
-    
-   <footer>
+    <footer>
         <p>&copy; 2024 InmoEspacial Cac8. Todos los derechos reservados.</p>
-    </footer> 
+    </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/main.js"></script>
 </body>
