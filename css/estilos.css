@@ -12,7 +12,6 @@ body {
     background-size: cover;    
     color: #fff;
 }
-
 header {
     position: relative;
     overflow: hidden;   
@@ -46,17 +45,44 @@ header .logo img {
     position: absolute;
     height: 45px;
     margin: -40px;
-    margin-left: 5p;
+    margin-left: 15px;
     
     }
-    
-
 
 .title-logo {
     display: grid;
     max-width: 1200px;
     justify-content: center;
 }
+
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .title-logo {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .title-logo h1 {
+        font-size: 1.2rem;
+    }
+}
+
 
 #inicio {
     padding: 20px;
@@ -144,8 +170,8 @@ footer {
     text-align: center;
     padding: 40px 1.25rem;
 }
-
-@media screen and (max-width: 600px) {
+/*
+@media screen and (max-width: 767px) {
     .propiedad img {
         max-width: 50%; 
     }
@@ -159,8 +185,8 @@ footer {
         height: max-content;
         font-size: 18px;
     }
-}
-
+} */
+    
 /* desde aca section QUIENES SOMOS */
 .nosotros-section {
     padding: 6.25rem;
