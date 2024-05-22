@@ -307,32 +307,88 @@ footer {
 
 /* Estilos para la sección principal usando json y js  */
 #app {
-    max-width: 50%;
+    max-width: 1200px;
     margin: 20px auto;
-}
-
-/* Estilos para cada dato del planeta */
-
-#app p {
-    margin-bottom: 10px;
-}
-
-#app img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* Estilos para la sección de ofertas */
-.ofertas {
-    margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.planeta-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.planeta-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.planeta-imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+.planeta-detalle {
+    flex: 2;
+    text-align: left;
+}
+
+.planeta-detalle h2,
+.planeta-detalle p {
+    margin: 10px 0;
+}
+
+.oferta-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.oferta-sticker {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    z-index: 1;
+    animation: blink-animation 1.5s infinite;
+}
+
+@keyframes blink-animation {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
 }
 
 .ofertas img {
-    width: 45%; /* Ajusta el tamaño de las imágenes de las ofertas */
+    width: 50%;
     height: auto;
+    border-radius: 5px;
+}
+
+.oferta-item {
+    position: relative;
+    width: calc(50% - 20px);
+    border: 3px solid #192845;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.oferta-item p {
+    margin: 10px 0;
 }
 
 
