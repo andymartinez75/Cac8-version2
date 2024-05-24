@@ -30,7 +30,7 @@ nav ul {
 }
 
 nav ul li {
-   /* margin-left: 20px;*/
+   
     margin-right: 2%;
     font-size: 80%
 
@@ -128,7 +128,7 @@ header .logo img {
     margin-top: 0;
     color: #fff;
 }
-
+ /* Estilos formulario */
 #contacto {
     padding: 20px;
     border-top: 20px;
@@ -194,8 +194,19 @@ footer {
 }
 
 .texto {
-    flex: 1 1 50%; 
+   
     text-shadow: 3px 3px 0 #000;
+}
+@media screen and (max-width: 1200px) {
+    .nosotros-section {
+        grid-template-columns: 1fr; 
+    }
+    .persona .texto p{
+        font-size: 1rem; 
+    }
+    .persona {
+        margin-bottom: 30px;
+    }
 }
 
 /*Estilos propiedades espaciales*/
@@ -290,6 +301,7 @@ footer {
 
 #app {
     max-width: 1200px;
+    height: 100%;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
@@ -302,6 +314,7 @@ footer {
     padding: 20px;
     gap: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .planeta-imagen {
@@ -401,3 +414,5 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+
