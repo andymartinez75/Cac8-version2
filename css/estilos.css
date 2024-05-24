@@ -177,8 +177,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-around;
-    gap: 20px;
-    
+    gap: 20px; 
 }
 
 .persona {
@@ -187,7 +186,6 @@ footer {
     align-items: center;
     margin-bottom: 20px;
     height: 18.75rem;
-
 }
 
 .foto-persona {
@@ -196,7 +194,6 @@ footer {
     object-fit: cover;
     border-radius: 50%; 
     margin-right: 20px; 
-    
 
 }
 
@@ -226,8 +223,6 @@ footer {
         font-size: 0.7rem; 
     }
 }
-}
-
 #propiedades {
     display: flex;
     justify-content:center;
