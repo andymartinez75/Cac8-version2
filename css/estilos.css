@@ -205,13 +205,27 @@ footer {
     text-shadow: 3px 3px 0 #000;
 }
 
+
 @media screen and (max-width: 1100px) {
     .nosotros-section {
         grid-template-columns: 1fr; 
     }
     .persona .texto p{
-        font-size: 1rem; 
+        font-size: 0.7rem; 
     }
+    .persona {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nosotros-section {
+        grid-template-columns: 1fr; 
+    }
+    .persona .texto p{
+        font-size: 0.7rem; 
+    }
+}
 }
 
 #propiedades {
