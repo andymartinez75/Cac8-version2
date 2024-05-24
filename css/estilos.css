@@ -427,31 +427,3 @@ footer {
     padding: 10px 0;
 }
 
-/*ICONOS REDES SOCIALES*/
-
-.social-icons {
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    gap: 20px;
-    justify-content: center;
-}
-.social-icons a {
-    color: WHITE;
-    text-decoration: none;
-    font-size: 24px;
-}
-.social-icons a:hover {
-    color: #007bff;
-}
-
-.footer{
-
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(25,40,69);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
