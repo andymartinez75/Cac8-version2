@@ -335,13 +335,6 @@ footer {
     padding: 20px;
     gap: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-}
-
-#app img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
 }
 
 /* Estilos para la sección de ofertas */
