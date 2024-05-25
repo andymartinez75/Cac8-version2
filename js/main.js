@@ -6,9 +6,13 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector("footer").outerHTML = data;
         });
 });
-
-
-
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector("header").outerHTML = data;
+        });
+});
 
 
      function validarFormularioContacto() {
