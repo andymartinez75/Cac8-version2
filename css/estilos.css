@@ -324,6 +324,9 @@ footer {
     max-width: 1200px;
     height: 100%;
     margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .planeta-container {
