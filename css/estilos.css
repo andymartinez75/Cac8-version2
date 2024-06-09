@@ -23,8 +23,7 @@ header {
     color: #fff;
     padding: 20px;
     width:100%;
-    box-sizing: border-box;
-    overflow: hidden;
+    box-sizing: border-box
 }
 
 nav ul {
@@ -264,8 +263,6 @@ header .logo img {
 .propiedad {
     flex:1 1 30% ;
     max-width: 300px;
-   /* border: 3px solid #fff;
-    border-radius: 8px;*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-decoration: none;
@@ -276,7 +273,6 @@ header .logo img {
     width: 100%;
     height:auto;
     border-radius: 8px 8px 0 0;
-    /*padding-top: 20px;*/
     max-width:min-content;/*para probar si queda*/
     max-height:35vh;
 }
@@ -334,7 +330,6 @@ footer {
     padding: 6.25rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /*justify-content: space-around;*/
     gap: 20px;
     
 }
@@ -352,13 +347,11 @@ footer {
     max-height: 100%;
     object-fit: cover;
     border-radius: 50%;
-   /* margin-right: 20px;*/
 }
 
 .texto {
     flex: 1;
     padding: 10px;
-
     text-shadow: 3px 3px 0 #000;
 }
 @media screen and (max-width: 1100px) {
