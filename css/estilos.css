@@ -87,6 +87,160 @@ header .logo img {
     }
 }
 
+/* Estilos para el formulario de login */
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+#login h2 {
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+#login form {
+    background-color: #192845;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+}
+
+#login form input[type="text"],
+#login form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+#login form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+#login .register-link {
+    text-align: center;
+    margin-top: 10px;
+}
+#login .register-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#login .register-link a:hover{
+    text-decoration: underline;
+}
+
+/* Responsividad login */
+@media screen and (max-width: 767px) {
+    #login {
+        padding: 10px;
+    }
+
+    #login form {
+        padding: 15px;
+    }
+}
+
+/* Estilos para el formulario de registro */
+#register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+#register h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#register form {
+    background-color: #192845;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+}
+
+#register form input[type="text"],
+#register form input[type="password"],
+#register form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+#register form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#register form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+#register .login-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#register .login-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#register .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad registro */
+@media screen and (max-width: 767px) {
+    #register {
+        padding: 10px;
+    }
+
+    #register form {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
 
 #inicio {
     padding: 20px;
@@ -203,7 +357,7 @@ footer {
 
     text-shadow: 3px 3px 0 #000;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1100px) {
     .nosotros-section {
         grid-template-columns: 1fr; 
     }
@@ -219,7 +373,7 @@ footer {
     margin: 0 auto 20px;
     }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 400px) {
     
     .persona .texto p{
         font-size: 0.7rem; 
@@ -320,9 +474,7 @@ footer {
     max-width: 1200px;
     height: 100%;
     margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+   
 }
 
 .planeta-container {
@@ -364,7 +516,7 @@ footer {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background-color: red;
+    background-color:#322AD2;
     color: white;
     padding: 5px 10px;
     font-size: 20px;
