@@ -24,7 +24,7 @@
                     <img v-bind:src="dato.imagen" v-bind:alt="dato.imagen">
                 </div>
                 <div class="planeta-detalle">
-                    <h2>Planeta: {{dato.planeta}}</h2>
+                    <h2>Planeta: {{dato.nombre}}</h2>
                     <p>Descripcion: {{dato.descripcion}}</p>
                     <p>Duracion del dia en horas: {{dato.duracion_dia}}</p>
                     <p>Cantidad de lunas: {{dato.cantidad_lunas}}</p>
@@ -36,7 +36,7 @@
         <section class="ofertas">
             <div class="oferta-container">
                 <div class="oferta-item" v-for="dato in datosOfertas" :key="dato.planeta">
-                    <h3>Planeta: {{dato.planeta}}</h3>
+                    <h3>Planeta: {{dato.nombre}}</h3>
                     <p>Duracion del dia en horas: {{dato.duracion_dia}}</p>
                     <p>Precio por metro cuadrado: {{dato.precio_metro_cuad}}</p>
                     <img v-bind:src="dato.imagen" v-bind:alt="dato.imagen">

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Administrador - Inmobiliaria Prueba1</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header class="header">
+    </header>
+
+    <main id="app">
+        <div class="table-container">
+            <h2>Planetas-CRUD</h2>
+            <button class="add-btn" @click="creaPlaneta()">Nuevo</button>
+            <table id="crudTable">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Duración Día</th>
+                        <th>Cantidad Lunas</th>
+                        <th>Precio/M²</th>
+                        <th>Oferta</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    
+                    <tr v-for="(planeta, index) in datos" :key="index">
+                            <td>{{ planeta.id }}</td>
+                            <td>{{ planeta.nombre }}</td>
+                            <td>{{ planeta.descripcion }}</td>
+                            <td>{{ planeta.duracion_dia }}</td>
+                            <td>{{ planeta.cantidad_lunas }}</td>
+                            <td>{{ planeta.precio_metro_cuad }}</td>
+                            <td>{{ planeta.oferta ? 'Sí' : 'No' }}</td>
+                            <td>
+                                <img :src="`https://andymar75.pythonanywhere.com/static/${planeta.imagen}`" :alt="'Imagen de ' + planeta.nombre">  </td>
+                            <td>
+                            <button class="modify-btn" @click="modificaPlaneta(planeta.id)">Modificar</button>
+                            <button class="delete-btn" @click="borraPlaneta(planeta.id)">Eliminar</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="footer">
+    </footer>
+
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
