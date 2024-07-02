@@ -21,7 +21,7 @@
         <div id="app">
             <div v-for="dato in datosPrincipales" :key="dato.planeta" class="planeta-container">
                 <div class="planeta-imagen">
-                    <img v-bind:src="dato.imagen" v-bind:alt="dato.imagen">
+                    <img :src="`https://andymar75.pythonanywhere.com/static/${dato.imagen}`"  :alt="dato.nombre">
                 </div>
                 <div class="planeta-detalle">
                     <h2>Planeta: {{dato.nombre}}</h2>
@@ -39,7 +39,7 @@
                     <h3>Planeta: {{dato.nombre}}</h3>
                     <p>Duracion del dia en horas: {{dato.duracion_dia}}</p>
                     <p>Precio por metro cuadrado: {{dato.precio_metro_cuad}}</p>
-                    <img v-bind:src="dato.imagen" v-bind:alt="dato.imagen">
+                    <img :src="`https://andymar75.pythonanywhere.com/static/${dato.imagen}`"  :alt="dato.nombre">
                     <div class="oferta-sticker">OFERTA </div>
                 </div>
             </div>

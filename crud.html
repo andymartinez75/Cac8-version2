@@ -49,7 +49,7 @@
                             <td>{{ planeta.precio_metro_cuad }}</td>
                             <td>{{ planeta.oferta ? 'Sí' : 'No' }}</td>
                             <td>
-                                <img :src="`https://andymar75.pythonanywhere.com/static/${planeta.imagen}`" :alt="'Imagen de ' + planeta.nombre">  </td>
+                                <img width="100":src="`https://andymar75.pythonanywhere.com/static/${planeta.imagen}`" :alt="'Imagen de ' + planeta.nombre">  </td>
                             <td>
                             <button class="modify-btn" @click="modificaPlaneta(planeta.id)">Modificar</button>
                             <button class="delete-btn" @click="borraPlaneta(planeta.id)">Eliminar</button>
@@ -66,6 +66,7 @@
 
     
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
+    
     <script src="./js/main.js"></script>
 </body>
 
