@@ -197,7 +197,7 @@ createApp({
                     console.error('Error al obtener detalles del planeta:', error);
                 });
         },
-        actualizaPlaneta(id) {
+        modificaPlaneta(id) {
             const planeta = this.datos.find(p => p.id === id);
             if (planeta) {
                 planeta.nombre = prompt('Nuevo nombre del planeta:', planeta.nombre);
