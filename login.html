@@ -18,13 +18,14 @@
 <body>
     <header class="header">
           </header>
-    <main>
+    <main id="app">
         <section id="login">
-            <form action="/login" method="post">
+            <form id="loginForm" @submit.prevent="login">
                 <h2>Iniciar Sesión</h2>
-                <input type="text" name="username" id="username" placeholder="Nombre de Usuario" required>
-                <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                <input type="text" v-model="loginForm.username" placeholder="Nombre de Usuario" required>
+                <input type="password" v-model="loginForm.password" placeholder="Contraseña" required>
                 <input type="submit" value="Iniciar Sesión">
+                <div v-if="loginError">{{ loginError }}</div>
                 <div class="register-link">
                     <p>¿No tienes una cuenta? <a href="/registro.html">Regístrate aquí</a></p>
                 </div>
@@ -32,16 +33,14 @@
         </section>
     </main>
 
-
-    <footer class="footer">
-
-    </footer>
+    <footer class="footer"></footer>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
     <script src="./js/main.js"></script>
 </body>
 
 </html>
+
 
 
 
