@@ -210,7 +210,30 @@ createApp({
                 });
         },
         modificaPlaneta(id) {
-            window.location.href = `/editarPlaneta.html?id=${id}`;
+            const planeta = this.datos.find(p => p.id === id);
+            if (planeta) {
+                planeta.nombre = prompt('Nuevo nombre del planeta:', planeta.nombre);
+                planeta.descripcion = prompt('Nueva descripción del planeta:', planeta.descripcion);
+                planeta.duracion_dia = prompt('Nueva duración del día:', planeta.duracion_dia);
+                planeta.cantidad_lunas = prompt('Nueva cantidad de lunas:', planeta.cantidad_lunas);
+                planeta.precio_metro_cuad = prompt('Nuevo precio por metro cuadrado:', planeta.precio_metro_cuad);
+                planeta.oferta = confirm('¿Está en oferta?');
+                planeta.imagen = prompt('Nueva imagen del planeta:', planeta.imagen);
+                fetch(`${this.urlPlanetas}/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(planeta)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("Planeta actualizado:", data);
+                    })
+                    .catch(error => {
+                        console.error('Error actualizando planeta:', error);
+                    });
+            }
         },
         borraPlaneta(id) {
             if (confirm('¿Estás seguro de que deseas borrar este planeta?')) {
@@ -328,4 +351,6 @@ createApp({
             this.fetchPlaneta();
         }
     }
+
+       
 }).mount('#app');
