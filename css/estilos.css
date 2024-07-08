@@ -657,3 +657,83 @@ button.add-btn {
 button.add-btn:hover {
     background-color: darkgreen;
 }
+/* Estilos para los formularios */
+#editar form, #nuevo form {
+    background-color: #192845;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 50px auto;
+    color: #fff;
+}
+
+#app-editar form label, #app-nuevo form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#editar form input[type="text"],
+#nuevo form input[type="text"],
+#editar form input[type="file"],
+#nuevo form input[type="file"],
+#editar form input[type="submit"],
+#nuevo form input[type="submit"],
+#editar form textarea,
+#nuevo form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+#editar form input[type="checkbox"],
+#nuevo form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#editar form input[type="submit"],
+#nuevo form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#editar form input[type="submit"]:hover,
+#nuevo form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#editar form a,
+#nuevo form a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#editar form a:hover,
+#nuevo form a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos */
+#editar h1,
+#nuevo h1 {
+    text-align: center;
+    color: #fff;
+}
+
+#editar {
+    padding: 20px;
+}
+
+#nuevo {
+    padding: 20px;
+}
+
+

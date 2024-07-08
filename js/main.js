@@ -23,13 +23,13 @@ function validarFormularioContacto() {
     
     let error = false;
     
-    if (nombre.value === "" || nombre.value.length < 3 ) {
+    if (nombre.value === "" || nombre.value.length < 3) {
         alert("El campo nombre no debe estar vacío o con menos de 3 caracteres");
         nombre.focus();
         error = true;
     }
     
-    if (apellido.value === "" || apellido.value.length < 3 ) {
+    if (apellido.value === "" || apellido.value.length < 3) {
         alert("El campo apellido no puede estar vacío o con menos de 3 caracteres");
         apellido.focus();
         error = true;
@@ -66,6 +66,7 @@ function validarFormularioContacto() {
         motivo.focus();
         error = true;
     }
+    
     if (archivo.files.length > 0) {
         let file = archivo.files[0];
         let validExtensions = ["image/jpeg", "image/png", "application/pdf"];
@@ -81,8 +82,8 @@ function validarFormularioContacto() {
             error = true;
         }
     }
+    
     if (error) {
-        // Evitar el envío del formulario si hay errores
         return false;
     } else {
         enviarFormulario();
@@ -91,13 +92,11 @@ function validarFormularioContacto() {
 }
 
 function validarEmail(email) {
-    // Expresión regular para validar un correo electrónico
-    var emailValido = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+    var emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailValido.test(email);
 }
 
 function validarTelefono(telefono) {
-    // Expresión regular para validar un número de teléfono de 10 dígitos
     var telefonoValido = /^\d{10}$/;
     return telefonoValido.test(telefono);
 }
@@ -129,11 +128,19 @@ createApp({
                 password: ''
             },
             registerError: '',
-            loginError: ''
+            loginError: '',
+            planeta: {
+                nombre: '',
+                descripcion: '',
+                duracion_dia: '',
+                cantidad_lunas: '',
+                precio_metro_cuad: '',
+                oferta: false,
+                imagen: ''
+            }
         };
     },
     methods: {
-        // Métodos para CRUD de planetas
         fetchDataPlanetas() {
             fetch(this.urlPlanetas)
                 .then(response => response.json())
@@ -163,25 +170,30 @@ createApp({
             }
         },
         creaPlaneta() {
-            const nuevoPlaneta = {
-                nombre: prompt('Nombre del planeta:'),
-                descripcion: prompt('Descripción del planeta:'),
-                duracion_dia: prompt('Duración del día:'),
-                cantidad_lunas: prompt('Cantidad de lunas:'),
-                precio_metro_cuad: prompt('Precio por metro cuadrado:'),
-                oferta: confirm('¿Está en oferta?'),
-                imagen: prompt('Imagen del planeta:')
-            };
+            window.location.href = '/nuevoPlaneta.html';
+        },
+        createPlaneta() {
+
+            if (!this.planeta.nombre ||
+                !this.planeta.descripcion ||
+                !this.planeta.duracion_dia ||
+                !this.planeta.cantidad_lunas ||
+                !this.planeta.precio_metro_cuad) {
+                alert('Por favor, completa todos los campos obligatorios.');
+                return;
+                }
+
             fetch(this.urlPlanetas, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(nuevoPlaneta)
+                body: JSON.stringify(this.planeta)
             })
                 .then(response => response.json())
                 .then(data => {
-                    this.datos.push(data);
+                    alert('Planeta creado exitosamente');
+                    window.location.href = '/crud.html';
                 })
                 .catch(error => {
                     console.error('Error creando planeta:', error);
@@ -198,30 +210,7 @@ createApp({
                 });
         },
         modificaPlaneta(id) {
-            const planeta = this.datos.find(p => p.id === id);
-            if (planeta) {
-                planeta.nombre = prompt('Nuevo nombre del planeta:', planeta.nombre);
-                planeta.descripcion = prompt('Nueva descripción del planeta:', planeta.descripcion);
-                planeta.duracion_dia = prompt('Nueva duración del día:', planeta.duracion_dia);
-                planeta.cantidad_lunas = prompt('Nueva cantidad de lunas:', planeta.cantidad_lunas);
-                planeta.precio_metro_cuad = prompt('Nuevo precio por metro cuadrado:', planeta.precio_metro_cuad);
-                planeta.oferta = confirm('¿Está en oferta?');
-                planeta.imagen = prompt('Nueva imagen del planeta:', planeta.imagen);
-                fetch(`${this.urlPlanetas}/${id}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(planeta)
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log("Planeta actualizado:", data);
-                    })
-                    .catch(error => {
-                        console.error('Error actualizando planeta:', error);
-                    });
-            }
+            window.location.href = `/editarPlaneta.html?id=${id}`;
         },
         borraPlaneta(id) {
             if (confirm('¿Estás seguro de que deseas borrar este planeta?')) {
@@ -230,13 +219,48 @@ createApp({
                 })
                     .then(() => {
                         this.datos = this.datos.filter(planeta => planeta.id !== id);
+                        alert('Planeta borrado exitosamente');
                     })
                     .catch(error => {
                         console.error('Error borrando planeta:', error);
                     });
             }
         },
-        // Métodos para registro de usuarios
+        fetchPlaneta() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            fetch(`${this.urlPlanetas}/${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    this.planeta = data;
+                })
+                .catch(error => {
+                    console.error('Error al obtener datos del planeta:', error);
+                });
+        },
+        onFileChange(event) {
+            const file = event.target.files[0];
+            this.planeta.imagen = URL.createObjectURL(file);
+        },
+        submitForm() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            fetch(`${this.urlPlanetas}/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(this.planeta)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Planeta actualizado exitosamente');
+                    window.location.href = '/crud.html';
+                })
+                .catch(error => {
+                    console.error('Error actualizando planeta:', error);
+                });
+        },
         register() {
             if (this.registerForm.password !== this.registerForm.confirm_password) {
                 this.registerError = 'Las contraseñas no coinciden.';
@@ -286,11 +310,9 @@ createApp({
                 .then(data => {
                     console.log('Usuario autenticado:', data);
                     if (data.is_admin) {
-                        // Si el usuario es administrador, redirigir a una página específica para administradores
-                        window.location.href = 'crud.html'; // Cambiar a la página correcta para administradores
+                        window.location.href = 'crud.html';
                     } else {
-                        // Si el usuario no es administrador, redirigir a otra página (puede ser la misma que para usuarios normales)
-                        window.location.href = 'index.html'; // Cambiar a la página correcta para usuarios normales
+                        window.location.href = 'index.html';
                     }
                 })
                 .catch(error => {
@@ -301,7 +323,9 @@ createApp({
     },
     mounted() {
         this.fetchDataPlanetas();
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('id')) {
+            this.fetchPlaneta();
+        }
     }
-
-       
 }).mount('#app');

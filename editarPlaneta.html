@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Planeta</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header class="header">
+          </header>
+          
+<main id="app">
+    <div id="editar">
+    <h1>Editar Planeta</h1>
+
+    <form @submit.prevent="submitForm">
+        <label for="nombre">Nombre del Planeta:</label>
+        <input type="text" id="nombre" v-model="planeta.nombre" required>
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" v-model="planeta.descripcion" required></textarea>
+        <label for="duracion_dia">Duración del Día:</label>
+        <input type="text" id="duracion_dia" v-model="planeta.duracion_dia" required>
+        <label for="cantidad_lunas">Cantidad de Lunas:</label>
+        <input type="text" id="cantidad_lunas" v-model="planeta.cantidad_lunas" required>
+        <label for="precio_metro_cuad">Precio por M²:</label>
+        <input type="text" id="precio_metro_cuad" v-model="planeta.precio_metro_cuad" required>
+        <label for="oferta">Oferta:</label>
+        <input type="checkbox" id="oferta" v-model="planeta.oferta">
+        <label for="imagen">Imagen:</label>
+        <input type="text" id="imagen" v-model="planeta.imagen"><br>
+        <input type="submit" value="Modificar Planeta">
+        <a href="./crud.html">Volver al Crud-Planetas</a>
+
+    </form>
+</div>
+
+    </main>
+
+    <footer class="footer">
+    </footer>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
+    <script src="./js/main.js"></script>
+
+    </body>
+    
+</html>
