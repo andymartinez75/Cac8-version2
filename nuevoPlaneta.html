@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Planeta</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header class="header">
+          </header>
+<main id="app">
+    <div id="nuevo">
+
+    <h1>Crear Nuevo Planeta</h1>
+
+
+    <form @submit.prevent="createPlaneta">
+        <label for="nombre">Nombre del planeta:</label>
+        <input type="text" v-model="planeta.nombre" id="nombre" name="nombre" required><br>
+        <label for="descripcion">Descripción del planeta:</label>
+        <input type="text" v-model="planeta.descripcion" id="descripcion" name="descripcion" required><br>
+        <label for="duracion_dia">Duración del día:</label>
+        <input type="text" v-model="planeta.duracion_dia" id="duracion_dia" name="duracion_dia" required><br>
+        <label for="cantidad_lunas">Cantidad de lunas:</label>
+        <input type="text" v-model="planeta.cantidad_lunas" id="cantidad_lunas" name="cantidad_lunas" required><br>
+        <label for="precio_metro_cuad">Precio por metro cuadrado:</label>
+        <input type="text" v-model="planeta.precio_metro_cuad" id="precio_metro_cuad" name="precio_metro_cuad" required><br>
+        <label for="oferta">¿Está en oferta?</label>
+        <input type="checkbox" v-model="planeta.oferta" id="oferta" name="oferta"><br>
+        <label for="imagen">Imagen del planeta:</label>
+        <input type="text" v-model="planeta.imagen" id="imagen" name="imagen"><br>
+        <input type="submit" value="Crear Planeta">
+        <a href="./crud.html">Volver al Crud-Planetas</a>
+    </form>
+</div>
+
+</main>
+
+<footer class="footer">
+</footer>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
+<script src="./js/main.js"></script>
+</body>
+
+</html>
+
