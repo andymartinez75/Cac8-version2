@@ -238,10 +238,6 @@ createApp({
                     console.error('Error al obtener datos del planeta:', error);
                 });
         },
-        onFileChange(event) {
-            const file = event.target.files[0];
-            this.planeta.imagen = URL.createObjectURL(file);
-        },
         submitForm() {
             const urlParams = new URLSearchParams(window.location.search);
             const id = urlParams.get('id');
